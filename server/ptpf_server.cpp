@@ -4,6 +4,7 @@
 #include "resources/attempts/updatecamera_attempt.h"
 
 #include <cstdio>
+#include <cstring>
 
 #include <pthread.h>
 // NOTE: tcp-mini only supports windows and linux, hence we only need to handle these two platforms (if tcp-mini doesn't compile,..
@@ -84,8 +85,8 @@ namespace
 	{
 	#ifdef PTPF_USEDIRECTX11
 		IDXGISwapChain* a;
-		int camera;
 	#endif
+		int camera;
 		int widthInPixels;
 		int heightInPixels;
 		int gfps;
@@ -252,9 +253,7 @@ namespace
 		int bHasGraphicsRenderingContract;
 		struct
 		{
-#ifdef PTPF_USEDIRECTX11
 			int camera;
-#endif
 			//int gfps;
 			int widthInPixels;
 			int heightInPixels;
