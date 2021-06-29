@@ -3,6 +3,7 @@
 #ifndef PTPF_PIXEL_FORMAT_H
 #define PTPF_PIXEL_FORMAT_H
 
+
 enum /*EPTPFPixelFormat*/
 {
 	EPTPFPixelFormat_RGBAInInt = 0,
